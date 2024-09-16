@@ -3,6 +3,7 @@ O Sistema de CRM e Vendas com BOT é uma aplicação desenvolvida para gerenciar
 
 Sequence Diagram
 O diagrama a seguir ilustra o fluxo de interação entre o usuário, o sistema web, a validação dos dados e o banco de dados.
+
 ![image](https://github.com/user-attachments/assets/71b0e291-195f-4cb5-b1f3-0203a1656c2c)
 
 
@@ -42,39 +43,32 @@ Facilita a interação com o banco sem a necessidade de escrever SQL diretamente
 1. Criar o Repositório
 Passo: Inicie um novo repositório no GitHub ou GitLab para versionar o projeto.
 Comando:
-git init
+```git init```)
 2. Escolher a Versão do Python para 3.12.1
 Utilize pyenv para gerenciar e definir a versão correta do Python:
-pyenv install 3.12.1
-pyenv local 3.12.1
+```pyenv install 3.12.1```
+```pyenv local 3.12.1```
 3. Criar um Ambiente Virtual
 Passo: Crie um ambiente virtual para isolar as dependências do projeto.
 Comando:
-python3.12 -m venv .venv
+```python3.12 -m venv .venv```
 4. Entrar no Ambiente Virtual
 Comando:
 Windows:
-.venv\Scripts\activate
+```.venv\Scripts\activate```
 Linux/Mac:
-source .venv/bin/activate
+```source .venv/bin/activate```
 5. Instalar as Dependências
 Instalar os pacotes necessários:
-pip install -r requirements.txt
+```pip install -r requirements.txt```
 6. Executar o Frontend
 Comando para rodar o frontend com Streamlit:
-streamlit run app.py
+```streamlit run app.py```
 7. Configurar o PostgreSQL
 Criar o banco de dados e a tabela necessária:
-CREATE DATABASE crm_vendas;
-CREATE TABLE vendas (
-    id SERIAL PRIMARY KEY,
-    email VARCHAR(255) NOT NULL,
-    data TIMESTAMP NOT NULL,
-    valor NUMERIC NOT NULL,
-    quantidade INTEGER NOT NULL,
-    produto VARCHAR(50) NOT NULL
-);
+```CREATE DATABASE crm_vendas;```
+```CREATE TABLE vendas (id SERIAL PRIMARY KEY,email VARCHAR(255) NOT NULL,data TIMESTAMP NOT NULL,valor NUMERIC NOT NULL,quantidade INTEGER NOT NULL,produto VARCHAR(50) NOT NULL);```
 8. Criar a Conexão com o PostgreSQL
-A conexão é gerenciada no módulo database.py utilizando psycopg2.
+A conexão é gerenciada no módulo database.py utilizando psycopg2-binary.
 Conclusão
 Este README serve como guia para configurar, entender, e executar o Sistema de CRM e Vendas. O projeto combina uma série de tecnologias modernas para proporcionar uma solução eficiente e fácil de usar para gestão de vendas. Com módulos bem definidos e documentação clara, o sistema está preparado para evoluir e se adaptar às necessidades dos usuários.
