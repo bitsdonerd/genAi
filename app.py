@@ -1,6 +1,9 @@
 import pandas as pd 
 import streamlit as st
 from datetime import time, datetime
+from pydantic import ValidationError
+import database
+from database import salvar_no_postgres
 import contrato
 from contrato import Vendas
 
@@ -51,5 +54,5 @@ def main():
 
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
