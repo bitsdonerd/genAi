@@ -1,24 +1,9 @@
-ntrodução
+### Introdução
 O Sistema de CRM e Vendas com BOT é uma aplicação desenvolvida para gerenciar e validar vendas de forma simples e eficiente. O sistema é composto por um frontend interativo desenvolvido com Streamlit, validação de dados com Pydantic, e integração com um banco de dados PostgreSQL usando Psycopg2.
 
 Sequence Diagram
 O diagrama a seguir ilustra o fluxo de interação entre o usuário, o sistema web, a validação dos dados e o banco de dados.
-sequenceDiagram
-    participant U as Usuário
-    participant SW as Sistema Web Streamlit
-    participant V as Validação Pydantic
-    participant DB as Banco de Dados SQLAlchemy
-    
-    U ->> SW: Inserir Dados
-    SW ->> V: Enviar Dados para Validação
-    alt Dados Válidos
-        V ->> DB: Inserir Dados no Banco de Dados
-        DB ->> SW: Confirmação de Armazenamento
-        SW ->> U: Dados Salvos com Sucesso
-    else Dados Inválidos
-        V ->> SW: Retornar Erros de Validação
-        SW ->> U: Exibir Mensagem de Erro
-    end
+![image](https://github.com/user-attachments/assets/71b0e291-195f-4cb5-b1f3-0203a1656c2c)
 
 
 Tecnologias Utilizadas
@@ -34,8 +19,8 @@ Uso no Projeto: Utilizado para conectar a aplicação ao banco de dados PostgreS
 ### SQLAlchemy (Opcional)
 * Descrição: SQLAlchemy é uma poderosa biblioteca de SQL toolkit e ORM (Object-Relational Mapping) para Python. Ele permite a interação com bancos de dados relacionais de forma mais intuitiva, utilizando objetos Python em vez de comandos SQL diretamente.
 Uso no Projeto: SQLAlchemy poderia ser utilizado para gerenciar a conexão com o banco de dados PostgreSQL e facilitar as operações de CRUD (opcional, não implementado no exemplo atual).
-MkDocs
-Descrição: MkDocs é uma ferramenta estática de documentação em Python que permite a criação de sites de documentação de forma simples e estruturada. É especialmente útil para projetos que precisam de uma documentação clara e acessível para os desenvolvedores e usuários.
+### MkDocs
+* Descrição: MkDocs é uma ferramenta estática de documentação em Python que permite a criação de sites de documentação de forma simples e estruturada. É especialmente útil para projetos que precisam de uma documentação clara e acessível para os desenvolvedores e usuários.
 Uso no Projeto: MkDocs é utilizado para gerar a documentação do sistema, detalhando como o projeto foi estruturado, as funcionalidades desenvolvidas, e como o sistema deve ser mantido e atualizado.
 Estrutura do Projeto
 Divisão dos Módulos
