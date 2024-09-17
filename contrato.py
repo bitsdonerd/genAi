@@ -13,6 +13,16 @@ class produtoEnum(str,Enum):
 
 # Classe do Pydantic (BaseModel)
 class Vendas(BaseModel):
+    """
+    Modelo de dados para a classe Vendas.
+
+    Args: 
+        email (EmailStr): email do vendedor 
+        data (datetime): data da venda
+        valor (PositiveFloat): valor da venda
+        quantidade (PositiveInt): quantidade de produto
+        produto (produtoEnum): nome do produto
+    """
     email: EmailStr
     data: datetime
     valor: PositiveFloat
