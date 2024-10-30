@@ -1,5 +1,5 @@
 ### Introdução
-O Sistema de CRM e Vendas com BOT é uma aplicação desenvolvida para gerenciar e validar vendas de forma simples e eficiente. O sistema é composto por um frontend interativo desenvolvido com Streamlit, validação de dados com Pydantic, e integração com um banco de dados PostgreSQL usando Psycopg2.
+O Sistema de CRM e Vendas é uma aplicação desenvolvida para gerenciar e validar vendas de forma simples e eficiente. O sistema é composto por um frontend interativo desenvolvido com Streamlit, validação de dados com Pydantic, e integração com um banco de dados PostgreSQL usando Psycopg2.
 
 Sequence Diagram
 O diagrama a seguir ilustra o fluxo de interação entre o usuário, o sistema web, a validação dos dados e o banco de dados.
